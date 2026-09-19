@@ -136,7 +136,7 @@
 <section class="lede">
   <div>
     <h1>Les <em>2 chambres</em> spacieux d'Aventura, triés.</h1>
-    <p>Critères : 2 chambres · ≥ 1 150 sq ft · ≤ 3 300 $/mois · non meublé en priorité · tours évitées. Chaque fiche indique si l'unité est vide et la hauteur de l'immeuble.</p>
+    <p>Critères : 2 chambres · ≥ 1 150 sq ft · ≤ 3 300 $/mois · non meublé en priorité · tours évitées · <b>et maintenant le filtre décisif : joli</b> (rénové, finitions récentes, pas les carrelages sable des années 90). Chaque fiche indique si l'unité est vide, la hauteur de l'immeuble et l'état des finitions.</p>
   </div>
   <div class="stats">
     <div class="stat"><b id="n-all">–</b><span>annonces</span></div>
@@ -146,7 +146,8 @@
 </section>
 
 <div class="controls">
-  <button class="chip on" data-f="sel">Sélection (sans tour)</button>
+  <button class="chip on" data-f="joli">Jolis & rénovés ✨</button>
+  <button class="chip" data-f="sel">Sélection (sans tour)</button>
   <button class="chip" data-f="empty">Vides confirmés</button>
   <button class="chip" data-f="th">Townhouses</button>
   <button class="chip" data-f="all">Tout voir (tours incluses)</button>
@@ -171,6 +172,10 @@
       <p><b>Camden Aventura</b> — grande 2 ch de 1 280 sq ft à ~2 889 $, garden 2-3 étages, waterfront marina, promo 500 $ avant le 30/09. Résidence locative : livrée non meublée.</p>
     </div>
     <div class="vcard">
+      <h3>✨ Le plus joli dans le budget</h3>
+      <p><b>Coronado Towers #1024</b> — 2 500 $, entièrement rénové (cuisine + sdb modernes), immeuble bas face au golf Turnberry. Seule réserve : 1 140 sq ft (10 sous le plancher). Sinon <b>Camden</b> (1 280 sq ft, rénové granite/inox, promo 500 $) reste le joli n°1 sans tour.</p>
+    </div>
+    <div class="vcard">
       <h3>🔑 Vide garanti · marina</h3>
       <p><b>Mystic Pointe #511</b> — 1 150 sq ft à 2 800 $, vide confirmé, waterfront (tour 30 étages). Alternative sans tour : Camden ou <b>Aventi Townhouse 2991</b> (1 316 sq ft à 3 090 $, 3 niveaux + garage).</p>
     </div>
@@ -182,12 +187,18 @@
 <script>
 const L = [
   // ---------- SÉLECTION SANS TOUR ----------
-  {t:"Camden Aventura · grande 2 ch", cat:["sel","empty"], addr:"3100 NE 190th St", town:"Aventura", price:2889, area:1280, bd:2, ba:2,
-   view:"Marina · garden", feats:["Immeuble 2-3 étages","Non meublé (locatif)","Waterfront marina","Promo 500 $ avant le 30/09"], top:"Choix n°1 sans tour",
+  {t:"Camden Aventura · grande 2 ch", cat:["sel","empty","joli"], addr:"3100 NE 190th St", town:"Aventura", price:2889, area:1280, bd:2, ba:2,
+   view:"Marina · garden", feats:["Rénové : granite + inox","Immeuble 2-3 étages","Non meublé (locatif)","Waterfront marina","Promo 500 $ avant le 30/09"], top:"Joli n°1 sans tour",
    url:"https://www.zillow.com/apartments/aventura-fl/camden-aventura/5XhxHM/", v:"v1", mono:"C"},
-  {t:"Promenade at Aventura · #19476", cat:["sel"], addr:"19680 E Country Club Dr, Unit 19476", town:"Aventura", price:3160, area:1304, bd:2, ba:2,
-   view:"Golf · garden", feats:["Dispo maintenant","Garage attaché","Non meublé (locatif)","Gated"], top:"Sans tour",
+  {t:"Promenade at Aventura · #19476", cat:["sel","joli"], addr:"19680 E Country Club Dr, Unit 19476", town:"Aventura", price:3160, area:1304, bd:2, ba:2,
+   view:"Golf · garden", feats:["Rénové : quartz + parquet effet bois","Cuisines GE inox","Dispo maintenant","Garage attaché","Gated"], top:"Joli · dispo maintenant",
    url:"https://www.zillow.com/apartments/aventura-fl/promenade-at-aventura-apartments/5XhxRQ/", v:"v2", mono:"P"},
+  {t:"Coronado Towers · #1024 (rénové)", cat:["sel","joli"], addr:"20301 W Country Club Dr, Unit 1024", town:"Aventura", price:2500, area:1140, bd:2, ba:2,
+   view:"Golf Turnberry · low-rise", feats:["Beautifully updated 2026","Cuisine + sdb refaites, finitions modernes","Immeuble bas (3-4 étages, 1975)","Vue fairway, très lumineux","⚠ 1 140 sq ft (10 sous le plancher)"], top:"Nouveau · meilleur rapport",
+   url:"https://www.homes.com/property/20301-w-country-club-dr-aventura-fl-unit-1024/5t6n34w8v095p/", v:"v3", mono:"Co"},
+  {t:"Midtown Aventura · 2 ch garden/townhome", cat:["sel","joli"], addr:"20080 W Dixie Hwy", town:"Aventura (33180)", price:2899, area:1200, bd:2, ba:2,
+   view:"Garden resort", feats:["Communauté modernisée (Willow Bridge)","Garden setting + townhomes","Piscine chauffée, yoga/spin, lounge","834–1 562 sq ft au total, 2 ch dès ~2 899 $","Prix 2 ch exact à confirmer"], top:"Nouveau · style resort",
+   url:"https://www.apartments.com/midtown-aventura-miami-fl/nqqlqrq/", v:"v4", mono:"M"},
   {t:"Promenade at Aventura · #19326", cat:["sel"], addr:"19680 E Country Club Dr, Unit 19326", town:"Aventura", price:3204, area:1304, bd:2, ba:2,
    view:"Golf · garden", feats:["Dispo 30 sept","Garage attaché","Quartz","Gated"],
    url:"https://www.zillow.com/apartments/aventura-fl/promenade-at-aventura-apartments/5XhxRQ/", v:"v3", mono:"P"},
