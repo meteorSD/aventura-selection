@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aventura · Sélection immobilière — 3 ch, ≤ 4 000 $</title>
+<title>Aventura · 2 chambres spacieux — ≤ 3 300 $</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,11 +16,10 @@
     --muted:#9fb0ae;
     --faint:#647574;
     --line:#263133;
-    --line-soft:#20282b;
-    --accent:#d8c49a;       /* sable chaud */
+    --accent:#d8c49a;
     --accent-ink:#141310;
-    --teal:#7fd4c1;         /* océan */
-    --coral:#e8957a;        /* badge */
+    --teal:#7fd4c1;
+    --coral:#e8957a;
     --radius:14px;
     --maxw:1180px;
   }
@@ -37,26 +36,16 @@
   h1,h2,.display{font-family:"Fraunces",Georgia,serif;font-weight:500;letter-spacing:.01em}
   a{color:inherit}
 
-  /* ---------- header ---------- */
   header{
     border-bottom:1px solid var(--line);
     padding:26px clamp(20px,5vw,48px) 22px;
     display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;
     position:sticky;top:0;background:rgba(14,18,20,.92);backdrop-filter:blur(8px);z-index:20;
   }
-  .brand{font-family:"Fraunces",serif;font-size:21px;font-weight:600;letter-spacing:.2px}
+  .brand{font-family:"Fraunces",serif;font-size:21px;font-weight:600}
   .brand span{color:var(--accent)}
   .sub{color:var(--muted);font-size:13.5px}
-  nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
-  .navbtn{
-    background:none;border:1px solid transparent;color:var(--muted);
-    padding:8px 14px;border-radius:999px;font:inherit;font-weight:500;cursor:pointer;
-    transition:.18s;
-  }
-  .navbtn:hover{border-color:var(--line);color:var(--ink)}
-  .navbtn.on{background:var(--panel-2);border-color:var(--line);color:var(--ink)}
 
-  /* ---------- hero strip ---------- */
   .lede{
     max-width:var(--maxw);margin:0 auto;padding:48px clamp(20px,5vw,48px) 8px;
     display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.9fr);gap:40px;align-items:end;
@@ -64,11 +53,10 @@
   .lede h1{font-size:clamp(34px,4.6vw,54px);line-height:1.08;letter-spacing:-.5px;text-wrap:balance}
   .lede h1 em{font-style:normal;color:var(--accent)}
   .lede p{color:var(--muted);max-width:52ch;margin-top:14px}
-  .stats{display:flex;gap:34px;padding-bottom:6px}
+  .stats{display:flex;gap:34px;padding-bottom:6px;flex-wrap:wrap}
   .stat b{display:block;font-family:"Fraunces",serif;font-size:30px;font-weight:600}
   .stat span{color:var(--faint);font-size:12.5px;text-transform:uppercase;letter-spacing:1.2px}
 
-  /* ---------- controls ---------- */
   .controls{
     max-width:var(--maxw);margin:34px auto 0;padding:0 clamp(20px,5vw,48px);
     display:flex;gap:10px;flex-wrap:wrap;align-items:center;
@@ -81,7 +69,6 @@
   .chip.on{background:var(--ink);color:var(--accent-ink);border-color:var(--ink)}
   .controls .count{margin-left:auto;color:var(--faint);font-size:13px}
 
-  /* ---------- cards ---------- */
   main{max-width:var(--maxw);margin:0 auto;padding:26px clamp(20px,5vw,48px) 70px}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
   .card{
@@ -90,260 +77,220 @@
   }
   .card:hover{transform:translateY(-3px);border-color:#3a4745}
   .visual{
-    height:132px;position:relative;display:flex;align-items:flex-end;padding:14px 16px;
+    height:128px;position:relative;display:flex;align-items:flex-end;padding:14px 16px;
     font-family:"Fraunces",serif;
   }
-  .visual .mono{
-    position:absolute;top:14px;left:16px;font-size:34px;font-weight:600;letter-spacing:1px;color:rgba(238,243,242,.9);
-  }
-  .visual .view{
-    position:absolute;top:16px;right:16px;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;
-    color:rgba(238,243,242,.75);
-  }
-  .visual .price{
-    font-family:"Fraunces",serif;font-size:27px;font-weight:600;color:#fff;letter-spacing:-.3px;
-  }
-  .visual .per{font-size:12px;color:rgba(238,243,242,.6);font-family:"Inter",sans-serif;font-weight:500}
-  .v1{background:linear-gradient(150deg,#274046,#182b30 70%)}
-  .v2{background:linear-gradient(150deg,#3b3a2e,#1d1c17 75%)}
-  .v3{background:linear-gradient(150deg,#2e2a3c,#181624 75%)}
-  .v4{background:linear-gradient(150deg,#3a2f2a,#1c1712 75%)}
-  .body{padding:16px 16px 15px;display:flex;flex-direction:column;gap:9px;flex:1}
-  .addr{font-weight:600;font-size:15.5px;letter-spacing:-.1px}
-  .place{color:var(--muted);font-size:12.5px;margin-top:2px}
-  .specs{display:flex;gap:14px;color:var(--muted);font-size:13px;flex-wrap:wrap}
-  .specs b{color:var(--ink);font-weight:600}
-  .feats{display:flex;gap:6px;flex-wrap:wrap}
-  .feat{
-    font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:3px 8px;
-  }
-  .feats .hot{color:var(--accent-ink);background:var(--accent);border-color:var(--accent);font-weight:600}
-  .feats .cool{color:#123f37;background:var(--teal);border-color:var(--teal);font-weight:600}
-  .links{margin-top:auto;padding-top:11px;display:flex;gap:14px;border-top:1px solid var(--line-soft, var(--line-soft))}
-  .links a{color:var(--teal);font-size:13px;font-weight:600;text-decoration:none}
-  .links a:hover{text-decoration:underline}
-  .links .main-link{color:var(--ink)}
+  .visual .mono{position:absolute;top:14px;left:16px;font-size:34px;font-weight:600;letter-spacing:1px;color:rgba(238,243,242,.9)}
+  .visual .view{position:absolute;top:16px;right:16px;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(238,243,242,.75)}
   .badge-top{
-    position:absolute;top:12px;right:12px;background:var(--coral);color:#1c0f0a;
-    font-size:10.5px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;
-    padding:4px 9px;border-radius:6px;
+    position:absolute;bottom:44px;left:16px;background:var(--coral);color:#241310;
+    font-family:"Inter",sans-serif;font-size:11px;font-weight:700;letter-spacing:.8px;
+    padding:4px 10px;border-radius:999px;text-transform:uppercase;
   }
+  .money{font-size:22px;font-weight:600;color:var(--ink)}
+  .money .per{display:block;font-family:"Inter",sans-serif;font-size:12px;color:rgba(238,243,242,.72);font-weight:500;margin-top:2px}
+  .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:9px;flex:1}
+  .addr{font-size:16.5px;font-weight:600}
+  .place{color:var(--muted);font-size:13px}
+  .specs{display:flex;gap:14px;color:var(--muted);font-size:13px;border-top:1px solid var(--line-soft);padding-top:10px}
+  .specs b{color:var(--ink);font-weight:600}
+  .feats{display:flex;flex-wrap:wrap;gap:6px}
+  .feat{font-size:11.5px;color:var(--muted);border:1px solid var(--line);padding:3px 9px;border-radius:999px}
+  .feat.hot{color:var(--accent-ink);background:var(--accent);border-color:var(--accent);font-weight:600}
+  .feat.empty{color:var(--teal);border-color:rgba(127,212,193,.4)}
+  .links{margin-top:auto;padding-top:8px}
+  .links a{color:var(--teal);font-size:13.5px;font-weight:600;text-decoration:none}
+  .links a:hover{text-decoration:underline}
+  .links .ag{color:var(--faint);font-weight:400;margin-left:10px;font-size:12.5px}
 
-  /* ---------- verdict ---------- */
+  /* verdict */
   .verdict{
-    margin-top:52px;background:var(--panel-2);border:1px solid var(--line);border-radius:var(--radius);
-    padding:26px clamp(18px,3vw,30px);
+    max-width:var(--maxw);margin:10px auto 0;padding:0 clamp(20px,5vw,48px) 80px;
   }
-  .verdict h2{font-size:23px;margin-bottom:6px}
-  .verdict p.vsub{color:var(--muted);margin-bottom:16px;font-size:13.5px}
-  .picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-  .pick{border:1px solid var(--line);border-radius:11px;padding:15px 16px;background:var(--panel)}
-  .pick .tag{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--accent);font-weight:700}
-  .pick .who{font-family:"Fraunces",serif;font-size:17.5px;font-weight:600;margin:5px 0 3px}
-  .pick .why{color:var(--muted);font-size:13px}
+  .verdict h2{font-size:26px;margin-bottom:16px}
+  .vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .vcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+  .vcard h3{font-size:15px;color:var(--accent);margin-bottom:8px;font-weight:600}
+  .vcard p{color:var(--muted);font-size:13.5px}
+  .foot{color:var(--faint);font-size:12.5px;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,48px) 60px}
 
-  footer{
-    border-top:1px solid var(--line);padding:20px clamp(20px,5vw,48px);
-    color:var(--faint);font-size:12.5px;display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between;
-  }
+  /* couleurs visuels */
+  .v1{background:linear-gradient(135deg,#233430,#1a2523)}
+  .v2{background:linear-gradient(135deg,#2a2a1e,#1d211a)}
+  .v3{background:linear-gradient(135deg,#1e2a33,#171f27)}
+  .v4{background:linear-gradient(135deg,#33262a,#241b20)}
 
-  @media(max-width:640px){
-    .stats{gap:22px}
-    .lede{padding-top:34px}
-    .grid{grid-template-columns:1fr}
-  }
-  @media (prefers-reduced-motion: reduce){
-    *{transition:none!important;scroll-behavior:auto!important}
+  @media(max-width:760px){
+    .lede{grid-template-columns:1fr;gap:18px}
+    .controls .count{width:100%;margin-left:0}
   }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="brand">Aventura <span>·</span> Sélection</div>
-  <div class="sub">Floride 33180 — non meublé · mis à jour 19 sept. 2026</div>
-  <nav>
-    <button class="navbtn on" data-f="all">Tout</button>
-    <button class="navbtn" data-f="2br">2 chambres</button>
-    <button class="navbtn" data-f="3br">3 chambres</button>
-    <button class="navbtn" data-f="th">Townhouses</button>
-    <button class="navbtn" data-f="new">Neuf / rénové</button>
-  </nav>
+  <div class="brand">Aventura <span>·</span> 2 chambres spacieux</div>
+  <div class="sub">Mise à jour : 19 septembre 2026</div>
 </header>
 
 <section class="lede">
   <div>
-    <h1>Vingt-sept logements à Aventura,<br>triés sur le volet — <em>2 à 3 chambres, ≤ 4 000 $</em>.</h1>
-    <p>Toute la recherche croisée Zillow / Trulia / sites officiels : appartements spacieux, townhouses et résidences neuves, avec disponibilités et promos en cours. Filtrez, comparez, cliquez vers l'annonce.</p>
+    <h1>Les <em>2 chambres</em> spacieux d'Aventura, triés.</h1>
+    <p>Critères : 2 chambres · ≥ 1 150 sq ft · ≤ 3 300 $/mois · non meublé en priorité · tours évitées. Chaque fiche indique si l'unité est vide et la hauteur de l'immeuble.</p>
   </div>
   <div class="stats">
-    <div class="stat"><b>27</b><span>unités listées</span></div>
-    <div class="stat"><b>1 143–2 496</b><span>sq ft</span></div>
-    <div class="stat"><b>2 800 $</b><span>meilleur prix</span></div>
-    <div class="stat"><b>≤ 4 k$</b><span>budget plafond</span></div>
+    <div class="stat"><b id="n-all">–</b><span>annonces</span></div>
+    <div class="stat"><b id="n-empty">–</b><span>vides</span></div>
+    <div class="stat"><b id="n-low">–</b><span>sans tour</span></div>
   </div>
 </section>
 
 <div class="controls">
-  <button class="chip on" data-sort="price">Prix ↑</button>
-  <button class="chip" data-sort="price-desc">Prix ↓</button>
+  <button class="chip on" data-f="sel">Sélection (sans tour)</button>
+  <button class="chip" data-f="empty">Vides confirmés</button>
+  <button class="chip" data-f="th">Townhouses</button>
+  <button class="chip" data-f="all">Tout voir (tours incluses)</button>
+  <span style="width:18px"></span>
+  <button class="chip on" data-sort="value">$/sq ft ↑</button>
+  <button class="chip" data-sort="price">Prix ↑</button>
   <button class="chip" data-sort="area">Surface ↓</button>
-  <button class="chip" data-sort="value">$ / sq ft ↑</button>
   <span class="count" id="count"></span>
 </div>
 
-<main>
-  <div class="grid" id="grid"></div>
+<main><div class="grid" id="grid"></div></main>
 
-  <section class="verdict">
-    <h2>Le verdict</h2>
-    <p class="vsub">Trois arbitrages simples selon ce que vous valorisez le plus.</p>
-    <div class="picks">
-      <div class="pick">
-        <div class="tag">Espace + prix</div>
-        <div class="who">Camden Aventura #202</div>
-        <div class="why">1 580 sq ft à 3 429 $ — le plus grand de la sélection, waterfront, et encore 570 $ sous le plafond. Promo 500 $ si emménagement avant le 30 sept.</div>
-      </div>
-      <div class="pick">
-        <div class="tag">Modernité</div>
-        <div class="who">Modera Aventura C04</div>
-        <div class="why">Immeuble flambant neuf : 1 480 sq ft, plafonds 3 m, quartz, baignoire spa — 3 900 $, soit 100 $ sous le budget.</div>
-      </div>
-      <div class="pick">
-        <div class="tag">Meilleur deal</div>
-        <div class="who">Camden Aventura #301</div>
-        <div class="why">1 350 sq ft à 2 839 $ — 1 160 $ de marge sous budget, l'écart le plus confortable de toute la liste.</div>
-      </div>
+<section class="verdict">
+  <h2>Le verdict</h2>
+  <div class="vgrid">
+    <div class="vcard">
+      <h3>🏆 Meilleur rapport surface/prix</h3>
+      <p><b>Admirals Port #501E</b> — 1 666 sq ft à 2 300 $ (1,38 $/sq ft). 40 % de surface en plus que le reste pour le prix le plus bas. Seul bémol : tour de 22 étages, immeuble des années 90.</p>
     </div>
-  </section>
-</main>
+    <div class="vcard">
+      <h3>🌿 Meilleur choix sans tour</h3>
+      <p><b>Camden Aventura</b> — grande 2 ch de 1 280 sq ft à ~2 889 $, garden 2-3 étages, waterfront marina, promo 500 $ avant le 30/09. Résidence locative : livrée non meublée.</p>
+    </div>
+    <div class="vcard">
+      <h3>🔑 Vide garanti · marina</h3>
+      <p><b>Mystic Pointe #511</b> — 1 150 sq ft à 2 800 $, vide confirmé, waterfront (tour 30 étages). Alternative sans tour : Camden ou <b>Aventi Townhouse 2991</b> (1 316 sq ft à 3 090 $, 3 niveaux + garage).</p>
+    </div>
+  </div>
+</section>
 
-<footer>
-  <div>Source : Zillow · Trulia · sites officiels des résidences — données au 19/09/2026, susceptibles d'évoluer vite.</div>
-  <div>Budget retenu : ≤ 4 000 $/mois · min. 2 chambres · non meublé</div>
-</footer>
+<p class="foot">Prix observés le 19/09/2026 sur Zillow, Realtor, Redfin, Homes.com et sites officiels. Les dispositions évoluent vite — vérifier disponibilité avant visite. Aucune donnée personnelle sur cette page.</p>
 
 <script>
 const L = [
-  // ---------- 3 CHAMBRES ----------
-  {t:"Camden Aventura · #301", cat:["3br"], addr:"3100 NE 190th St, Unit 301", town:"Aventura", price:2839, area:1350, bd:3, ba:2,
-   view:"Marina", feats:["Waterfront","4 piscines","Tennis","Garage","Laverie in-unit","Promo 500 $ avant le 30/09"], top:"Meilleur deal",
+  // ---------- SÉLECTION SANS TOUR ----------
+  {t:"Camden Aventura · grande 2 ch", cat:["sel","empty"], addr:"3100 NE 190th St", town:"Aventura", price:2889, area:1280, bd:2, ba:2,
+   view:"Marina · garden", feats:["Immeuble 2-3 étages","Non meublé (locatif)","Waterfront marina","Promo 500 $ avant le 30/09"], top:"Choix n°1 sans tour",
    url:"https://www.zillow.com/apartments/aventura-fl/camden-aventura/5XhxHM/", v:"v1", mono:"C"},
-  {t:"Camden Aventura · #308", cat:["3br"], addr:"3100 NE 190th St, Unit 308", town:"Aventura", price:3049, area:1350, bd:3, ba:2,
-   view:"Marina", feats:["Waterfront","4 piscines","Gym","Garage","Dispo maintenant"], url:"https://www.zillow.com/apartments/aventura-fl/camden-aventura/5XhxHM/", v:"v2", mono:"C"},
-  {t:"Camden Aventura · #104", cat:["3br"], addr:"3100 NE 190th St, Unit 104", town:"Aventura", price:3079, area:1350, bd:3, ba:2,
-   view:"Marina", feats:["Rez-de-jardin","4 piscines","Garage","Dispo maintenant"], url:"https://www.zillow.com/apartments/aventura-fl/camden-aventura/5XhxHM/", v:"v3", mono:"C"},
-  {t:"Camden Aventura · #202", cat:["3br"], addr:"3100 NE 190th St, Unit 202", town:"Aventura", price:3429, area:1580, bd:3, ba:2,
-   view:"Marina", feats:["Le plus grand 3 ch de la sélection","Waterfront","Marina privée","Promo 500 $ avant le 30/09"], top:"Espace max",
-   url:"https://www.zillow.com/apartments/aventura-fl/camden-aventura/5XhxHM/", v:"v4", mono:"C"},
-  {t:"Waterways Village · #3215", cat:["3br"], addr:"3609 NE 207th St, Unit 3215", town:"Aventura", price:3403, area:1395, bd:3, ba:2,
-   view:"Canal", feats:["Accès marina direct","Piscine eau salée","Dog park","~1 mois gratuit"], url:"https://www.zillow.com/apartments/aventura-fl/waterways-village/5Xt9Nt/", v:"v1", mono:"W"},
-  {t:"Waterways Village · #2115", cat:["3br"], addr:"3609 NE 207th St, Unit 2115", town:"Aventura", price:3443, area:1395, bd:3, ba:2,
-   view:"Canal", feats:["Accès marina","Piscine eau salée","~1 mois gratuit"], url:"https://www.zillow.com/apartments/aventura-fl/waterways-village/5Xt9Nt/", v:"v2", mono:"W"},
-  {t:"Waterways Village · #1314", cat:["3br"], addr:"3609 NE 207th St, Unit 1314", town:"Aventura", price:3463, area:1395, bd:3, ba:2,
-   view:"Canal", feats:["Accès marina","À 2 pas d'Aventura Mall","~1 mois gratuit"], url:"https://www.zillow.com/apartments/aventura-fl/waterways-village/5Xt9Nt/", v:"v2", mono:"W"},
-  {t:"Modera Aventura · C01", cat:["3br","new"], addr:"2660 NE 192nd Terrace, Plan C01", town:"Aventura Nord", price:3696, area:1300, bd:3, ba:2,
-   view:"Ville", feats:["Immeuble neuf","Plafonds 3 m","Quartz","Smart home","3 unités dispo"], url:"https://www.moderaaventura.com/miami/modera-aventura/conventional/", v:"v3", mono:"M"},
-  {t:"Modera Aventura · C03", cat:["3br","new"], addr:"2660 NE 192nd Terrace, Plan C03", town:"Aventura", price:3675, area:1340, bd:3, ba:2,
-   view:"Ville", feats:["Immeuble neuf","Quartz","Plafonds 3 m","Dernière unité"], url:"https://www.moderaaventura.com/miami/modera-aventura/conventional/", v:"v1", mono:"M"},
-  {t:"Modera Aventura · C04", cat:["3br","new"], addr:"2660 NE 192nd Terrace, Plan C04", town:"Aventura", price:3900, area:1480, bd:3, ba:2,
-   view:"Ville", feats:["Le plus neuf de la liste","Baignoire spa","Cave à vin (certaines unités)","4 unités dispo"], top:"Neuf premium",
-   url:"https://www.moderaaventura.com/miami/modera-aventura/conventional/", v:"v2", mono:"M"},
-  {t:"Modera Aventura · C02", cat:["3br","new"], addr:"2660 NE 192nd Terrace, Plan C02", town:"Aventura", price:4000, area:1302, bd:3, ba:2,
-   view:"Ville", feats:["Immeuble neuf","Au plafond du budget","Dernière unité"], url:"https://www.moderaaventura.com/miami/modera-aventura/conventional/", v:"v4", mono:"M"},
-  {t:"Promenade at Aventura · 3bd/3ba", cat:["3br"], addr:"19680 E Country Club Dr", town:"Aventura", price:3997, area:1409, bd:3, ba:3,
-   view:"Golf", feats:["Vue Turnberry Country Club","Garage attaché","Gated","À 5 min de l'Aventura Mall"], url:"https://www.zillow.com/apartments/aventura-fl/promenade-at-aventura-apartments/5XhxRQ/", v:"v1", mono:"P"},
-  {t:"Townhouse · 20911 Leeward Ct #2", cat:["3br","th"], addr:"20911 Leeward Ct #2", town:"Waterways · Miami 33180", price:3600, area:1143, bd:3, ba:2,
-   view:"Quartier", feats:["Format maison","Quartier calme","Garage"], url:"https://www.zillow.com/homedetails/20911-Leeward-Ct-2-Miami-FL-33180/2099947951_zpid/", v:"v3", mono:"L"},
-  {t:"Townhouse · 3535 Magellan Cir #3", cat:["3br","th"], addr:"3535 Magellan Cir #3", town:"Waterways · Miami 33180", price:3600, area:1143, bd:3, ba:2,
-   view:"Quartier", feats:["Format maison","Proche marina","Garage"], url:"https://www.zillow.com/homedetails/3535-Magellan-Cir-3-Miami-FL-33180/2055923305_zpid/", v:"v2", mono:"M"},
-
-  // ---------- 2 CHAMBRES ----------
-  {t:"3375 N Country Club Dr · #1605", cat:["2br"], addr:"3375 N Country Club Dr, Apt 1605", town:"Aventura", price:2800, area:1308, bd:2, ba:2,
-   view:"Golf + Intracoastal", feats:["Le moins cher de la sélection","Offert non meublé","1 parking","Dispo immédiatement"], top:"Meilleur rapport",
-   url:"https://www.zillow.com/homes/3375-N-Country-Club-Dr,-Aventura,-FL-33180_rb/", v:"v2", mono:"G"},
-  {t:"Harborside · 3640 Yacht Club Dr", cat:["2br"], addr:"3640 Yacht Club Dr", town:"Aventura", price:3100, area:1430, bd:2, ba:2,
-   view:"Marina panoramique", feats:["Plus grand 2/2 de l'immeuble","Laverie in-unit","2 parkings couverts","Immeuble rénové"], url:"https://www.zillow.com/homes/3640-Yacht-Club-Dr,-Aventura,-FL-33180_rb/", v:"v1", mono:"H"},
-  {t:"Turnberry · 19900 W Country Club Dr", cat:["2br"], addr:"19900 W Country Club Dr", town:"Aventura", price:3400, area:1300, bd:2, ba:2,
-   view:"Golf", feats:["Laverie in-unit","Gym","Piscine","Dispo immédiatement"], url:"https://www.zillow.com/homes/19900-W-Country-Club-Dr,-Aventura,-FL-33180_rb/", v:"v3", mono:"T"},
-  {t:"19355 Turnberry Way · #23F", cat:["2br"], addr:"19355 Turnberry Way, Apt 23F", town:"Aventura", price:3800, area:1677, bd:2, ba:2,
-   view:"Golf", feats:["Rénové intégralement","Pièce bonus (bureau / 3e ch)","À pied d'Aventura Mall"], url:"https://www.zillow.com/homes/19355-Turnberry-Way,-Aventura,-FL-33180_rb/", v:"v4", mono:"T"},
-  {t:"Promenade at Aventura · #19476", cat:["2br"], addr:"19680 E Country Club Dr, Unit 19476", town:"Aventura", price:3160, area:1304, bd:2, ba:2,
-   view:"Golf", feats:["Dispo maintenant","Garage attaché","Piscine resort","Gated"], url:"https://www.zillow.com/apartments/aventura-fl/promenade-at-aventura-apartments/5XhxRQ/", v:"v2", mono:"P"},
-  {t:"Promenade at Aventura · #19326", cat:["2br"], addr:"19680 E Country Club Dr, Unit 19326", town:"Aventura", price:3204, area:1304, bd:2, ba:2,
-   view:"Golf", feats:["Dispo 30 sept","Garage attaché","Quartz","Gated"], url:"https://www.zillow.com/apartments/aventura-fl/promenade-at-aventura-apartments/5XhxRQ/", v:"v3", mono:"P"},
-
-  // ---------- MODERNE / RÉNOVÉ (2 ch, budget étendu) ----------
-  {t:"20191 E Country Club Dr · #1111", cat:["2br","new"], addr:"20191 E Country Club Dr, Apt 1111", town:"Aventura", price:3995, area:1500, bd:2, ba:2,
-   view:"Intracoastal + golf", feats:["Entièrement rénové","Balcon panoramique enveloppant","Vue depuis toutes les pièces","Dispo 1er oct"], top:"Coup de cœur",
-   url:"https://www.zillow.com/homedetails/20191-E-Country-Club-Dr-APT-1111-Aventura-FL-33180/44048291_zpid/", v:"v1", mono:"O"},
+  {t:"Promenade at Aventura · #19476", cat:["sel"], addr:"19680 E Country Club Dr, Unit 19476", town:"Aventura", price:3160, area:1304, bd:2, ba:2,
+   view:"Golf · garden", feats:["Dispo maintenant","Garage attaché","Non meublé (locatif)","Gated"], top:"Sans tour",
+   url:"https://www.zillow.com/apartments/aventura-fl/promenade-at-aventura-apartments/5XhxRQ/", v:"v2", mono:"P"},
+  {t:"Promenade at Aventura · #19326", cat:["sel"], addr:"19680 E Country Club Dr, Unit 19326", town:"Aventura", price:3204, area:1304, bd:2, ba:2,
+   view:"Golf · garden", feats:["Dispo 30 sept","Garage attaché","Quartz","Gated"],
+   url:"https://www.zillow.com/apartments/aventura-fl/promenade-at-aventura-apartments/5XhxRQ/", v:"v3", mono:"P"},
+  {t:"Promenade at Aventura · #19362", cat:["sel"], addr:"19680 E Country Club Dr, Unit 19362", town:"Aventura", price:3280, area:1304, bd:2, ba:2,
+   view:"Golf · garden", feats:["Dispo 30 sept","Garage attaché","Gated"],
+   url:"https://www.zillow.com/apartments/aventura-fl/promenade-at-aventura-apartments/5XhxRQ/", v:"v4", mono:"P"},
+  {t:"Omni at California Club · #204", cat:["sel"], addr:"20761 NE 4th Pl, Apt 204", town:"Aventura Lakes", price:2000, area:1165, bd:2, ba:2,
+   view:"Résidence calme", feats:["Immeuble 3 étages","Le moins cher","Gated community"], top:"Budget min",
+   url:"https://www.realtor.com/rentals/details/20761-NE-4th-Pl-Apt-204_Miami_FL_33179_M55311-56896", v:"v1", mono:"O", ag:"Y. Sanabria (786) 356-4400"},
 
   // ---------- TOWNHOUSES ----------
-  {t:"Aventi Townhouses · 2991 NE 185th St", cat:["th"], addr:"2991 NE 185th St", town:"Aventura", price:3090, area:1316, bd:2, ba:2,
-   view:"Résidence privée", feats:["Meilleure ville de la catégorie","Garage 2 places","3 niveaux","Marina à pied"], top:"Meilleur rapport",
-   url:"https://www.zillow.com/homedetails/2991-NE-185th-St-Miami-FL-33180/439365754_zpid/", v:"v4", mono:"A"},
-  {t:"Aventi Townhouses · 2961 NE 185th St", cat:["th"], addr:"2961 NE 185th St", town:"Aventura", price:3200, area:1270, bd:2, ba:2,
-   view:"Résidence privée", feats:["Garage 2 places","Piscine resort","Laverie in-unit"], url:"https://www.zillow.com/homedetails/2961-NE-185th-St-Aventura-FL-33180/2104497360_zpid/", v:"v3", mono:"A"},
-  {t:"Aventi Townhouses · 2965 NE 185th St", cat:["th"], addr:"2965 NE 185th St", town:"Aventura", price:3600, area:1316, bd:2, ba:2,
-   view:"Résidence privée", feats:["Garage 2 places","3 niveaux","Gated"], url:"https://www.zillow.com/homedetails/2965-NE-185th-St-Miami-FL-33180/2104912585_zpid/", v:"v2", mono:"A"},
-  {t:"Aventi Townhouses · 2801 NE 185th St #3", cat:["th"], addr:"2801 NE 185th St #3", town:"Aventura", price:3600, area:1316, bd:2, ba:2,
-   view:"Résidence privée", feats:["3 niveaux","Garage 2 places","Boardwalk à pied"], url:"https://www.zillow.com/homedetails/2801-NE-185th-St-3-Miami-FL-33180/450092856_zpid/", v:"v1", mono:"A"},
-  {t:"2542 NE 182nd St", cat:["th","3br"], addr:"2542 NE 182nd St", town:"North Miami Beach · ~5 min d'Aventura", price:3200, area:2496, bd:3, ba:2,
-   view:"Rue calme", feats:["Style single-family","Presque 2 500 sq ft","Le plus spacieux de toute la liste"], top:"Espace XXL",
-   url:"https://www.zillow.com/homes/2542-NE-182nd-St,-Miami,-FL-33180_rb/", v:"v2", mono:"N"},
-  {t:"Blu Aventura · #1-0610", cat:["2br","new"], addr:"2335 NE 186th St, Unit 1-0610", town:"Aventura", price:3925, area:1273, bd:2, ba:3,
-   view:"Ville", feats:["Immeuble neuf","Finitions noir mat / quartz","Plafonds 9'6","Piscine à débordement chauffée","Jusqu'à 2 mois gratuits"], url:"https://www.zillow.com/apartments/miami-fl/blu-aventura/CsMDnj/", v:"v3", mono:"B"},
+  {t:"Aventi Townhouses · 2991 NE 185th St", cat:["sel","th"], addr:"2991 NE 185th St", town:"Aventura", price:3090, area:1316, bd:2, ba:2,
+   view:"Résidence privée", feats:["Vraie maison · 3 niveaux","Garage 2 places","Marina à pied","Pas d'immeuble"], top:"Coup de cœur",
+   url:"https://www.zillow.com/homedetails/2991-NE-185th-St-Miami-FL-33180/439365754_zpid/", v:"v2", mono:"A"},
+  {t:"Aventi Townhouses · 2961 NE 185th St", cat:["sel","th"], addr:"2961 NE 185th St", town:"Aventura", price:3200, area:1270, bd:2, ba:2,
+   view:"Résidence privée", feats:["3 niveaux","Garage 2 places","Piscine resort","Laverie in-unit"],
+   url:"https://www.zillow.com/homedetails/2961-NE-185th-St-Aventura-FL-33180/2104497360_zpid/", v:"v3", mono:"A"},
+
+  // ---------- VIDES CONFIRMÉS (tours) ----------
+  {t:"3375 N Country Club Dr · #1605", cat:["empty"], addr:"3375 N Country Club Dr, Apt 1605", town:"Aventura", price:2800, area:1308, bd:2, ba:2,
+   view:"Golf + Intracoastal", feats:["Vide confirmé","Vue golf + Intracoastal","Dispo maintenant","Tour"], top:"Vide",
+   url:"https://www.zillow.com/homes/3375-N-Country-Club-Dr,-Aventura,-FL-33180_rb/", v:"v4", mono:"G"},
+  {t:"Mystic Pointe · #511", cat:["empty"], addr:"3600 Mystic Pointe Dr, Unit 511", town:"Aventura", price:2800, area:1150, bd:2, ba:2,
+   view:"Waterfront", feats:["Vide confirmé","Marina · tennis · piscines","Tour 30 étages"], top:"Vide",
+   url:"https://mysticpointcondoaventura.com/rent/", v:"v1", mono:"M"},
+  {t:"Mystic Pointe · #710", cat:["empty"], addr:"3500 Mystic Pointe Dr, Unit 710", town:"Aventura", price:3200, area:1447, bd:2, ba:2,
+   view:"Waterfront", feats:["Vide confirmé","La plus grande du bâtiment dans le budget","60 j en stock → négociable","Tour"], top:"Espace",
+   url:"https://mysticpointcondoaventura.com/property-3500-Mystic-Pointe-Dr-Aventura-6A12050849", v:"v2", mono:"M"},
+  {t:"Mystic Pointe · #3702", cat:["empty"], addr:"3500 Mystic Pointe Dr, Unit 3702", town:"Aventura", price:3300, area:1353, bd:2, ba:2,
+   view:"Waterfront", feats:["Vide confirmé","Au plafond du budget","40 j en stock","Tour"],
+   url:"https://mysticpointcondoaventura.com/property-3500-Mystic-Pointe-Dr-Aventura-6A12062991", v:"v3", mono:"M"},
+  {t:"Aventura Yacht Club · #5106", cat:["empty"], addr:"19701 E Country Club Dr, Unit 5106", town:"Aventura", price:2800, area:1180, bd:2, ba:2,
+   view:"Piscine · jardin", feats:["Vide sur demande","Balcon direct piscine","58 j en stock → négociable","Tour"], top:"Négociable",
+   url:"https://cityseekmiami.com/search/unit/19701-e-country-club-dr-5106", v:"v4", mono:"Y", ag:"Indira Lopez (786) 348-6561"},
+
+  // ---------- TOURS (coups de cœur malgré la hauteur) ----------
+  {t:"Admirals Port · #501E", cat:["tours"], addr:"2851 NE 183rd St, Apt 501E", town:"Aventura", price:2300, area:1666, bd:2, ba:2,
+   view:"Ville · lac", feats:["1 666 sq ft — le plus spacieux","1,38 $/sq ft — imbattable","Aventura Mall à pied","Tour 22 étages · années 90"], top:"Meilleur deal",
+   url:"https://www.realtor.com/rentals/details/2851-NE-183rd-St-Apt-501_Aventura_FL_33160_M69906-14374", v:"v1", mono:"A", ag:"F. Bragagnolo (305) 420-6543"},
+  {t:"Harborside · 3640 Yacht Club Dr #103", cat:["tours"], addr:"3640 Yacht Club Dr, Unit 103", town:"Aventura", price:2775, area:1310, bd:2, ba:2,
+   view:"Marina", feats:["Immense lanai privée","Plafonds hauts","Plan split","Tour ~20 étages"],
+   url:"https://www.homes.com/property/3640-yacht-club-dr-miami-fl-unit-103/0s10vbklq5j39/", v:"v2", mono:"H"},
+  {t:"Harborside · 3640 Yacht Club Dr", cat:["tours"], addr:"3640 Yacht Club Dr", town:"Aventura", price:3100, area:1430, bd:2, ba:2,
+   view:"Marina panoramique", feats:["Plus grand 2/2 de l'immeuble","2 parkings couverts","Immeuble rénové","Tour"],
+   url:"https://www.zillow.com/homes/3640-Yacht-Club-Dr,-Aventura,-FL-33180_rb/", v:"v3", mono:"H"},
+  {t:"Admirals Port West · 2801 NE 183rd St", cat:["tours"], addr:"2801 NE 183rd St (#1212W · #1914W · rénovée vue lac)", town:"Aventura", price:2499, area:1220, bd:2, ba:2,
+   view:"Maule Lake (rénovée)", feats:["Plusieurs unités 2 499–2 850 $","Une rénovée vue Maule Lake à 2 850 $","Tour 22 étages"],
+   url:"https://www.zillow.com/homedetails/2801-NE-183rd-St-APT-1212W-Aventura-FL-33160/44054771_zpid/", v:"v4", mono:"A"},
+  {t:"20505 E Country Club Dr · #1138", cat:["tours"], addr:"20505 E Country Club Dr, Apt 1138", town:"Aventura", price:3150, area:1214, bd:2, ba:2,
+   view:"Golf", feats:["Secteur Turnberry golf","Nouvelles annonces récurrentes","Tour"],
+   url:"https://www.realtor.com/rentals/details/20505-E-Country-Club-Dr-Apt-1138_Aventura_FL_33180_M67601-61785", v:"v1", mono:"R"},
 ];
 
 const $ = s=>document.querySelector(s);
 const grid=$("#grid"), countEl=$("#count");
-let filter="all", sort="price";
+let filter="sel", sort="value";
 
-const fmt=n=>n.toLocaleString("fr-FR");
-const catName=c=>c==="2br"?"2 chambres":c==="3br"?"3 chambres":c==="th"?"Townhouse":"Neuf / rénové";
+document.getElementById("n-all").textContent=L.length;
+document.getElementById("n-empty").textContent=L.filter(a=>a.cat.includes("empty")).length;
+document.getElementById("n-low").textContent=L.filter(a=>a.cat.includes("sel")).length;
 
 function money(a){
-  const p=a.price, area=a.area;
-  const $sqf=(p/area);
-  return `${p.toLocaleString("en-US")} <span class="per">$/mois · ${Math.round($sqf)} $/sq ft</span>`;
+  const sqf=Math.round(a.price/a.area*100)/100;
+  return `<span class="money">${a.price.toLocaleString("en-US")} $<span class="per">/mois · ${sqf.toFixed(2)} $/sq ft</span></span>`;
 }
 
 function render(){
-  let list=L.filter(a=>filter==="all"||a.cat.includes(filter));
+  let list=L.filter(a=>
+    filter==="all" ? true :
+    filter==="tours" ? a.cat.includes("tours") :
+    a.cat.includes(filter)
+  );
   const sorters={
     "price":(a,b)=>a.price-b.price,
-    "price-desc":(a,b)=>b.price-a.price,
     "area":(a,b)=>b.area-a.area,
     "value":(a,b)=>a.price/a.area - b.price/b.area,
   };
   list.sort(sorters[sort]);
   grid.innerHTML=list.map(a=>`
-    <article class="card" data-cats="${a.cat.join(" ")}">
+    <article class="card">
       <div class="visual ${a.v}">
         ${a.top?`<span class="badge-top">${a.top}</span>`:""}
         <span class="mono">${a.mono}</span>
-        <div>
-          <div class="addr" style="position:static;transform:none">${money(a)}</div>
-        </div>
-        <span class="view" style="position:absolute;bottom:14px;right:16px">${a.view}</span>
+        <div>${money(a)}</div>
+        <span class="view">${a.view}</span>
       </div>
       <div class="body">
         <div class="addr">${a.t}</div>
         <div class="place">${a.addr} · ${a.town}</div>
-        <div class="specs"><b>${a.bd}</b> ch · <b>${a.ba}</b> sdb · <b>${a.area.toLocaleString("fr-FR")}</b> sq ft</div>
-        <div class="feats">${a.feats.slice(0,4).map((f,i)=>`<span class="feat ${i===0&&(a.top||f.includes("neuf")||f.includes("Neuf"))?"hot":""}">${f}</span>`).join("")}</div>
-        <div class="links"><a href="${a.url}" target="_blank" rel="noopener">Voir l'annonce ↗</a></div>
+        <div class="specs"><span><b>${a.bd}</b> ch</span><span><b>${a.ba}</b> sdb</span><span><b>${a.area.toLocaleString("fr-FR")}</b> sq ft</span></div>
+        <div class="feats">${a.feats.map((f,i)=>`<span class="feat ${f.startsWith("Vide")||f.includes("Non meublé")?"empty":(i===0&&a.top)?"hot":""}">${f}</span>`).join("")}</div>
+        <div class="links"><a href="${a.url}" target="_blank" rel="noopener">Voir l'annonce ↗</a>${a.ag?`<span class="ag">☎ ${a.ag}</span>`:""}</div>
       </div>
     </article>`).join("");
   countEl.textContent=`${list.length} résultat${list.length>1?"s":""}`;
 }
 
-document.querySelectorAll(".navbtn").forEach(b=>b.addEventListener("click",()=>{
-  document.querySelectorAll(".navbtn").forEach(x=>x.classList.remove("on"));
+document.querySelectorAll(".chip[data-f]").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".chip[data-f]").forEach(x=>x.classList.remove("on"));
   b.classList.add("on"); filter=b.dataset.f; render();
 }));
 document.querySelectorAll(".chip[data-sort]").forEach(c=>c.addEventListener("click",()=>{
-  document.querySelectorAll(".chip").forEach(x=>x.classList.remove("on"));
+  document.querySelectorAll(".chip[data-sort]").forEach(x=>x.classList.remove("on"));
   c.classList.add("on"); sort=c.dataset.sort; render();
 }));
 
